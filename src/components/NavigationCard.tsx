@@ -1,13 +1,19 @@
 import Card from "./Card";
 
 const NavigationCard = () => {
+  const activeElement =
+    "flex md:gap-3 gap-0 py-3 text-white bg-socialBlue -mx-3 px-3 md:-mx-8 md:px-10 rounded-md shadow-md shadow-slate-300 font-bold";
+
+  const nonActiveElement =
+    "flex gap-3 py-2 my-2 hover:bg-blue-200 hover:bg-opacity-50 -mx-3 px-3 md:-mx-5 md:px-5 rounded-md transition-all hover:scale-110 hover:shadow-md hover:shadow-slate-300";
+
   return (
     <Card>
       <div className="px-1 md:px-4 py-2">
         <h2 className="font-bold text-gray-400 mb-3 hidden md:flex">
           Navigation
         </h2>
-        <a href="" className="flex md:gap-3 gap-0 py-3">
+        <a href="" className={`${activeElement}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,7 +30,7 @@ const NavigationCard = () => {
           </svg>
           <div className="hidden md:flex">Home</div>
         </a>
-        <a href="" className="flex gap-3 py-3">
+        <a href="" className={`${nonActiveElement}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -41,7 +47,7 @@ const NavigationCard = () => {
           </svg>
           <div className="hidden md:flex">Friends</div>
         </a>
-        <a href="" className="flex gap-3 py-3">
+        <a href="" className={`${nonActiveElement}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -58,7 +64,7 @@ const NavigationCard = () => {
           </svg>
           <div className="hidden md:flex">Save Posts</div>
         </a>
-        <a href="" className="flex gap-3 py-3">
+        <a href="" className={`${nonActiveElement}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -75,7 +81,10 @@ const NavigationCard = () => {
           </svg>
           <div className="hidden md:flex">Notification</div>
         </a>
-        <a href="" className="flex gap-3 py-3">
+        <a
+          href=""
+          className="flex gap-3 py-2 my-2 hover:bg-blue-200 hover:bg-opacity-50 -mx-3 px-3 md:-mx-5 md:px-5 rounded-md transition-all hover:scale-110 hover:shadow-md hover:shadow-slate-300 "
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
