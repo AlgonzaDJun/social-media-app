@@ -1,10 +1,14 @@
+import { Link, useLocation } from "react-router-dom";
 import Card from "./Card";
 
 const NavigationCard = () => {
-  const activeElement =
-    "flex md:gap-3 gap-0 py-3 text-white bg-socialBlue -mx-3 px-3 md:-mx-8 md:px-10 rounded-md shadow-md shadow-slate-300 font-bold";
+  const location = useLocation();
+  const { pathname } = location;
 
-  const nonActiveElement =
+  const activeElementClass =
+    "flex md:gap-3 gap-0 py-3 my-1 text-white bg-socialBlue -mx-3 px-3 md:-mx-8 md:px-10 rounded-md shadow-md shadow-slate-300 font-bold";
+
+  const nonActiveElementClass =
     "flex gap-3 py-2 my-2 hover:bg-blue-200 hover:bg-opacity-50 -mx-3 px-3 md:-mx-5 md:px-5 rounded-md transition-all hover:scale-110 hover:shadow-md hover:shadow-slate-300";
 
   return (
@@ -13,7 +17,12 @@ const NavigationCard = () => {
         <h2 className="font-bold text-gray-400 mb-3 hidden md:flex">
           Navigation
         </h2>
-        <a href="" className={`${activeElement}`}>
+        <Link
+          to="/"
+          className={`${
+            pathname === "/" ? activeElementClass : nonActiveElementClass
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,8 +38,8 @@ const NavigationCard = () => {
             />
           </svg>
           <div className="hidden md:flex">Home</div>
-        </a>
-        <a href="" className={`${nonActiveElement}`}>
+        </Link>
+        <Link to="" className={`${nonActiveElementClass}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,8 +55,8 @@ const NavigationCard = () => {
             />
           </svg>
           <div className="hidden md:flex">Friends</div>
-        </a>
-        <a href="" className={`${nonActiveElement}`}>
+        </Link>
+        <Link to="" className={`${nonActiveElementClass}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -63,8 +72,8 @@ const NavigationCard = () => {
             />
           </svg>
           <div className="hidden md:flex">Save Posts</div>
-        </a>
-        <a href="" className={`${nonActiveElement}`}>
+        </Link>
+        <Link to="" className={`${nonActiveElementClass}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -80,9 +89,9 @@ const NavigationCard = () => {
             />
           </svg>
           <div className="hidden md:flex">Notification</div>
-        </a>
-        <a
-          href=""
+        </Link>
+        <Link
+          to=""
           className="flex gap-3 py-2 my-2 hover:bg-blue-200 hover:bg-opacity-50 -mx-3 px-3 md:-mx-5 md:px-5 rounded-md transition-all hover:scale-110 hover:shadow-md hover:shadow-slate-300 "
         >
           <svg
@@ -100,7 +109,7 @@ const NavigationCard = () => {
             />
           </svg>
           <div className="hidden md:flex">Logout</div>
-        </a>
+        </Link>
       </div>
     </Card>
   );

@@ -3,6 +3,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from "./pages/Profile.tsx";
+import NotFoundPage from "./pages/404.tsx";
 
 const router = createBrowserRouter([
   {
@@ -10,8 +11,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/profile",
+    path: "/profile/*",
     element: <Profile />,
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
 
