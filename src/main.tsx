@@ -4,11 +4,16 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from "./pages/Profile.tsx";
 import NotFoundPage from "./pages/404.tsx";
+import SavedPost from "./pages/SavedPost.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/saved",
+    element: <SavedPost />,
   },
   {
     path: "/profile/*",
