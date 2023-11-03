@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from "./pages/Profile.tsx";
 import NotFoundPage from "./pages/404.tsx";
 import SavedPost from "./pages/SavedPost.tsx";
+import Notification from "./pages/Notification.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/saved",
     element: <SavedPost />,
+  },
+  {
+    path: "/notifications",
+    element: <Notification />,
   },
   {
     path: "/profile/*",
