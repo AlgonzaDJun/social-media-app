@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Avatar from "../components/Avatar";
 import { Link, useLocation } from "react-router-dom";
 import PostCard from "../components/PostCard";
+import FriendInfo from "../components/FriendInfo";
 
 const Profile = () => {
   const location = useLocation();
@@ -132,7 +133,83 @@ const Profile = () => {
         <div>
           <Card>
             <h1 className="text-2xl font-semibold mb-3">About Me</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, distinctio. Consectetur voluptatibus officia fuga temporibus ipsum ratione sit repellendus id soluta, fugiat odit aliquid, voluptas minima dolore voluptates, cupiditate mollitia.</p>
+            <p className="mb-2 text-sm">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+              distinctio. Consectetur voluptatibus officia fuga temporibus ipsum
+              ratione sit repellendus id soluta, fugiat odit aliquid, voluptas
+              minima dolore voluptates, cupiditate mollitia.
+            </p>
+            <p className="mb-2 text-sm">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+              distinctio. Consectetur voluptatibus officia fuga temporibus ipsum
+              ratione sit repellendus id soluta, fugiat odit aliquid, voluptas
+              minima dolore voluptates, cupiditate mollitia.
+            </p>
+          </Card>
+        </div>
+      )}
+
+      {isFriends && (
+        <div>
+          <Card>
+            <h1 className="text-2xl font-semibold mb-3">Friends</h1>
+            <div className="">
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+              <div className="border-b p-4 -mx-4 border-b-slate-300">
+                <FriendInfo />
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {isPhotos && (
+        <div>
+          <Card>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1543874768-af0b9c4090d5?auto=format&fit=crop&q=80&w=2874&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&q=80&w=2906&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1578055648339-b67df3c862bc?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </Card>
         </div>
       )}

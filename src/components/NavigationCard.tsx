@@ -39,7 +39,14 @@ const NavigationCard = () => {
           </svg>
           <div className="hidden md:flex">Home</div>
         </Link>
-        <Link to="" className={`${nonActiveElementClass}`}>
+        <Link
+          to="/profile/friends"
+          className={`${
+            pathname.includes("friends")
+              ? activeElementClass
+              : nonActiveElementClass
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
