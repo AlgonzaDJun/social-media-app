@@ -7,7 +7,7 @@ const Notification = () => {
   return (
     <Layout>
       <Card>
-        <h1 className="text-4xl text-gray-300">Your Saved Post</h1>
+        <h1 className="text-4xl text-gray-300">Notifications</h1>
       </Card>
       <Card noPadding={true}>
         <div className="hover:bg-slate-300 rounded-md">

@@ -6,6 +6,7 @@ import Profile from "./pages/Profile.tsx";
 import NotFoundPage from "./pages/404.tsx";
 import SavedPost from "./pages/SavedPost.tsx";
 import Notification from "./pages/Notification.tsx";
+import Login from "./pages/Login.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/notifications",
     element: <Notification />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/profile/*",

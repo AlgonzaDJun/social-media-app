@@ -14,7 +14,9 @@ const Layout = ({ children, hideNavigation }: props) => {
           <NavigationCard />
         </div>
       )}
-      <div className="grow md:w-9/12">{children}</div>
+      <div className={hideNavigation ? "w-full" : "grow md:w-9/12"}>
+        {children}
+      </div>
     </div>
   );
 };
